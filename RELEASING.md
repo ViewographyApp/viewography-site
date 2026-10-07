@@ -7,3 +7,19 @@ Do this when a new build reaches testers, not before.
 3. **Previous builds:** move the build that was current into the collapsible "Previous builds" section at the bottom of the page (a `<details>` element, closed by default, newest first). Create the section the first time (S2E5 release, moving S2E4).
 4. Copy `whats-new.html` to `whats-new/index.html` so both routes match.
 5. Check the page at phone width, then push to main.
+
+# TestFlight "What to Test" format
+
+Plain text (TestFlight doesn't render markdown). Always in this order:
+
+```
+Season X Episode Y: Episode Title
+
+What's new in this build
+• ...
+
+What to test
+• ...
+```
+
+Use the same wording as the What's New release notes.
