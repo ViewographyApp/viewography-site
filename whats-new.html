@@ -15,9 +15,10 @@
 
     <section class="current-build" aria-labelledby="current-heading">
       <p class="beta-label">Current Apple iOS beta</p>
-      <h2 id="current-heading">Version 2.0 (22)</h2>
+      <h2 id="current-heading">S2E4 · Back to the Future</h2>
+      <p class="build-number">Version 2.0 (22)</p>
       <p>Available through TestFlight. Requires an iPhone running iOS 27.</p>
-      <a class="notes-link" href="/#beta-heading">Request beta access</a>
+      <button class="beta-button" id="beta-open" type="button">Request beta access</button>
     </section>
 
     <section aria-labelledby="features-heading">
@@ -77,7 +78,8 @@
 
       <article class="release">
         <div class="release-head">
-          <h3>2.0 (22)</h3>
+          <h3>S2E4 · Back to the Future</h3>
+          <span class="build-number">2.0 (22)</span>
           <span class="release-tag">Apple iOS beta</span>
         </div>
         <ul class="notes-list">
@@ -96,9 +98,27 @@
 
     <p class="muted notes-footer">Questions or ideas? Email <a href="mailto:support@viewography.app">support@viewography.app</a>.</p>
   </main>
+<dialog id="beta-panel" aria-labelledby="beta-panel-title" aria-describedby="beta-description">
+  <button class="beta-close" type="button" aria-label="Close beta request">×</button>
+  <p class="beta-label">Apple iOS beta</p>
+  <h2 id="beta-panel-title">Request beta access</h2>
+  <p id="beta-description">Try Viewography on your iPhone and share feedback and ideas to help make it better.</p>
+  <form id="beta-form">
+    <label for="beta-name">Name</label>
+    <input id="beta-name" name="name" autocomplete="name" maxlength="120" required>
+    <label for="beta-email">Apple ID email address</label>
+    <input id="beta-email" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="beta-email-help" required>
+    <p id="beta-email-help" class="beta-note">Enter the email address you use for your Apple ID so we can invite you to the Apple iOS beta through TestFlight.</p>
+    <div class="beta-trap" aria-hidden="true"><label for="beta-website">Website</label><input id="beta-website" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+    <p class="beta-note">Your request is sent through FormSubmit to support@viewography.app. We'll use your name and email to contact you about the Apple iOS beta.</p>
+    <button class="beta-button" type="submit">Submit request</button>
+    <p id="beta-status" role="status" aria-live="polite"></p>
+  </form>
+</dialog>
   <footer>
     <span>© 2026 Viewography</span>
     <nav><a href="/whats-new" aria-current="page">What's New</a><a href="/privacy">Privacy Policy</a><a href="/support.html">Support</a></nav>
   </footer>
+<script src="/beta.js" defer></script>
 </body>
 </html>

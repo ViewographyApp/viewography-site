@@ -22,7 +22,7 @@ betaForm.addEventListener('submit', async (event) => {
   data.set('email', data.get('email').trim());
   data.set('Apple ID email address', data.get('email'));
   data.set('_subject', 'Viewography Apple iOS beta access request');
-  data.set('_url', 'https://viewography.app/');
+  data.set('_url', location.href);
   data.set('_template', 'table');
   try {
     const response = await fetch(betaSubmissionEndpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
